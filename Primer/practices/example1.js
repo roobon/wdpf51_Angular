@@ -6,6 +6,5 @@ function myFunction(param) {
     throw ("Expected a number: " + param)
     }
    }
-
    myFunction(10);
    myFunction("Dhaka");
