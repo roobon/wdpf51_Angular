@@ -1,5 +1,6 @@
 # ignore file and folder
 
+todo/node_modules
 todo1/node_modules
 Primer/node_modules
 
