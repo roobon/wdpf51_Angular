@@ -20,4 +20,7 @@ import { TodoItem } from "./todoItem";
   return this.list.items
   .filter(item => !item.complete).length;
   }
+  get items(): readonly TodoItem[] {
+    return this.list.items;
+    }
  }
