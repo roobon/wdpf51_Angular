@@ -1,6 +1,20 @@
-let myArray: (number | string | boolean)[] = [100, "Adam", true];
-let otherArray = [...myArray, 200, "Bob", false];
-let sum: number = otherArray
- .filter(val => typeof(val) == "number")
- .reduce((total: number, val) => total + (val as number), 0)
-console.log(`Sum: ${sum}`)
+import { Observable, Observer, Subject } from "rxjs";
+
+this.data$ = Observable.of({
+    "data": [
+      {
+        "firstname": "abc",
+        "lastname": "aa"
+      },
+       {
+        "firstname": "xyz",
+        "lastname": "bb"
+      }
+    ]
+  })  .map(res => res.data)
+    .switchMap(dataArray => {
+      return Observable.from(dataArray);
+    })
+    .map((arrayResp: any) => {
+      return ( arrayResp.firstname);
+    }).toArray()
